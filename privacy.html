@@ -1,23 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy - P02 Rclone Backup</title>
+  <meta name="description" content="Privacy policy for the P-02 personal Google Drive backup integrations.">
+  <title>Privacy Policy - P-02 Private Google Drive Backup Tools</title>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>P02 Rclone Backup is a personal-use configuration of the open-source rclone program.</p>
-  <h2>Google Drive Access</h2>
-  <p>The application requests access to the account owner's Google Drive files to list, copy, upload, download, and manage files as instructed by the owner.</p>
-  <h2>Data Storage</h2>
-  <p>File content is transferred between the owner's device and Google Drive. Rclone stores its Google authorization configuration and tokens locally on the owner's computer.</p>
-  <h2>Data Sharing</h2>
-  <p>The application does not sell Google user data or share it with advertisers. This informational GitHub Pages website does not receive Google Drive file contents or authorization tokens.</p>
-  <h2>Security and Access</h2>
-  <p>Access is controlled by the owner's Google authorization and can be revoked through Google Account settings.</p>
-  <p><a href="/">Return to homepage</a></p>
+  <main>
+    <h1>Privacy Policy - P-02 Private Google Drive Backup Tools</h1>
+    <p>These applications are personal-use tools controlled by the Google account owner, not a public service. This website is an informational page and does not ask visitors to sign in to Google or submit personal information.</p>
+
+    <h2>Applications and Google Drive access</h2>
+    <p><strong>P02 Rclone Backup:</strong> The owner uses the open-source rclone utility to transfer, list, verify, and manage selected files between the owner's computer and Google Drive. Access is limited by the permissions granted to that separate rclone OAuth client and by the owner's instructions.</p>
+    <p><strong>P02 Private Alaska Archive:</strong> The owner uses a Python application executed through private, manually triggered GitHub Actions workflows. It requests the Google Drive <code>https://www.googleapis.com/auth/drive.file</code> permission to create and verify backup files that the application creates or that are made accessible to it. It can create an archive folder and upload, inspect, or delete its own test and backup files.</p>
+
+    <h2>What information is processed</h2>
+    <p>The applications process the selected backup files and the Google Drive metadata needed to identify, upload, verify, retrieve, or delete those files. The Alaska archive may contain downloaded public mineral-tenure GIS source data, quality-control records, manifests, and checksums. The informational website itself does not receive Google Drive file contents or OAuth tokens.</p>
+
+    <h2>Where information is stored</h2>
+    <p>Rclone's authorization configuration is stored on the owner's device. The Python application's OAuth credentials are intended to be held in private GitHub Actions repository secrets and used only during authorized workflow runs. During an authorized run, the Python application processes files on the GitHub-hosted runner before transferring selected results to the owner's Google Drive. The backup contents are not committed to the public website repository. Google and GitHub may process information as needed to provide their respective services.</p>
+
+    <h2>Use and sharing</h2>
+    <p>The applications use Google Drive information only to perform owner-directed backup, verification, retrieval, and cleanup operations. They are not used for advertising, profiling, or sale of user data. No Google Drive user data is intentionally shared with advertisers or made public by the website. Data is disclosed only as necessary to the connected service providers and as directed by the owner.</p>
+
+    <h2>Retention and deletion</h2>
+    <p>Stored backup files remain in the owner's Google Drive until the owner deletes them or authorizes their deletion. A successful Python connection smoke test creates a temporary synthetic file, verifies it, and then removes it; a failed test may require manual cleanup. Temporary runner storage is not intended as a permanent archive. The owner can delete stored files in Google Drive and revoke each application's authorization in Google Account security settings.</p>
+
+    <h2>Security</h2>
+    <p>OAuth permissions are granted by the owner. Tokens are not embedded in this public website. The Python workflow is intended to be run only through a private repository with owner-controlled GitHub Actions secrets. Authorization can be revoked by the Google account owner at any time.</p>
+
+    <p><a href="/">Return to homepage</a></p>
+  </main>
 </body>
 </html>
-  
