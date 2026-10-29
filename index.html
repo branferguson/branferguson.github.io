@@ -1,17 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>P02 Rclone Backup</title>
+  <meta name="description" content="Personal-use Google Drive backup integrations for a private mineral exploration research project.">
+  <title>P-02 Private Google Drive Backup Tools</title>
 </head>
 <body>
-  <h1>P02 Rclone Backup</h1>
-  <p>This is a personal-use Google Drive backup configuration using the open-source rclone utility.</p>
-  <p>It allows the account owner to copy and back up files between a local computer and the owner's Google Drive account using the Google Drive API.</p>
-  <p>The application is not a public service, and it does not provide other users with access to the owner's files.</p>
-  <p><a href="/privacy.html">Privacy Policy</a></p>
+  <main>
+    <h1>P-02 Private Google Drive Backup Tools</h1>
+    <p>This is an informational website for two owner-operated Google Drive backup integrations supporting a private mineral exploration research project. These are personal-use tools, not public services. The website does not request Google sign-in, receive Drive files, or collect OAuth tokens.</p>
+
+    <h2>P02 Rclone Backup</h2>
+    <p>The existing integration uses the open-source rclone utility to transfer or back up files between the owner's computer and the owner's Google Drive as directed by the owner. Its authorization is separate from the Python integration.</p>
+
+    <h2>P02 Private Alaska Archive</h2>
+    <p>A separate Python backup integration runs on a GitHub-hosted Actions runner, when manually authorized by the owner. It uses the Google Drive API to create, inspect, and verify backups in the owner's Google Drive. It requests the <code>https://www.googleapis.com/auth/drive.file</code> scope, limited to files created by or made accessible to the application.</p>
+    <p>The connection check uses a small synthetic test file. Acquisition and archiving of public Alaska mineral-tenure GIS snapshots is a separate owner-authorized operation. The files and authentication credentials are not published in the website's repository.</p>
+
+    <p><a href="/privacy.html">Privacy Policy</a></p>
+  </main>
 </body>
 </html>
-  
